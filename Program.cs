@@ -19,10 +19,16 @@
 //ImprimirValores(queries.LibrosPython());
 
 // Libros de java ordenados por nombre
-ImprimirValores(queries.LibrosJavaPorNombreAcendente());
+//ImprimirValores(queries.LibrosJavaPorNombreAcendente());
 
 // Libros con mas de 450 pag ordenados por cantidad de paginas
-ImprimirValores(queries.LibrosDeMAsDe450PagOrdenadosDecendente());
+//ImprimirValores(queries.LibrosDeMAsDe450PagOrdenadosDecendente());
+
+// los 3 libros de java mas recientemente publicados 
+//ImprimirValores(queries.Libros3PrimerosLibrosOrdenadosPorFecha());
+
+// Tercer y 4 libro con mas de 400 paginas
+ImprimirValores(queries.TercerYCuartoLibroMayor400Pag());
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){
     Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");
