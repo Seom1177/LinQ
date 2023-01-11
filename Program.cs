@@ -16,7 +16,13 @@
 //Console.WriteLine($"Algun libro fue publicado en 2005? = {queries.AlgunLibroPublicadoEn2005()}");
 
 // Libros de Python
-ImprimirValores(queries.LibrosPython());
+//ImprimirValores(queries.LibrosPython());
+
+// Libros de java ordenados por nombre
+ImprimirValores(queries.LibrosJavaPorNombreAcendente());
+
+// Libros con mas de 450 pag ordenados por cantidad de paginas
+ImprimirValores(queries.LibrosDeMAsDe450PagOrdenadosDecendente());
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){
     Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");

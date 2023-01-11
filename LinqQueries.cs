@@ -40,4 +40,12 @@ public class LinqQueries{
     public IEnumerable<Book> LibrosPython(){
         return librosCollection.Where(p => p.Categories.Contains("Python"));
     }
+    public IEnumerable<Book> LibrosJavaPorNombreAcendente(){
+        return librosCollection.Where(p => p.Categories.Contains("Java"))
+                                .OrderBy(p => p.Title);
+    }
+    public IEnumerable<Book> LibrosDeMAsDe450PagOrdenadosDecendente(){
+        return librosCollection.Where(p => p.PageCount > 450)
+                                .OrderByDescending(p => p.PageCount);
+    }
 }
