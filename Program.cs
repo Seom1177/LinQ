@@ -50,8 +50,15 @@
 //Console.WriteLine($"{libroMenorPag!.Title} - {libroMenorPag.PageCount}");
 
 // MaxBy libro con la fecha publicacion mas reciente
-var libroMaxFecha = queries.LibroFechaPublicacionReciente();
-Console.WriteLine($"{libroMaxFecha!.Title} - {libroMaxFecha.PublishedDate.ToShortDateString()}");
+// var libroMaxFecha = queries.LibroFechaPublicacionReciente();
+// Console.WriteLine($"{libroMaxFecha!.Title} - {libroMaxFecha.PublishedDate.ToShortDateString()}");
+
+// Sum suma paginas entre 0 a 500 por libro
+// Console.WriteLine($"Suma total de paginas {queries.SumaDeTodasLasPag200a500()}");
+
+// Libros publicados despues del 2015
+Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concat());
+
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){
     Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");
