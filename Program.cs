@@ -57,7 +57,10 @@
 // Console.WriteLine($"Suma total de paginas {queries.SumaDeTodasLasPag200a500()}");
 
 // Libros publicados despues del 2015
-Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concat());
+// Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concat());
+
+// El promedio de caracteres de los titulos de los libros
+Console.WriteLine($"Promedio char titulos libros {queries.PromedioCaracteresTitulo()}");
 
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){

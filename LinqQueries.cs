@@ -103,4 +103,8 @@ public class LinqQueries{
                 return TitulosLibros;
             });
     }
+    public double PromedioCaracteresTitulo(){
+        return librosCollection
+            .Average(p=>p.Title.Length);
+    }
 }
