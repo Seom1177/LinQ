@@ -67,4 +67,13 @@ public class LinqQueries{
             .Take(3)
             .Select( p => new Book { Title = p.Title, PageCount = p.PageCount});
     }
+    public int CantidadDeLibrosEntre200y500(){
+        return librosCollection.Count(p=> p.PageCount >= 200 &&
+                                            p.PageCount <= 500);
+    }
+    public long CantidadDeLibrosEntre200y500Long(){
+        return librosCollection.Where(p=> p.PageCount >= 200 &&
+                                            p.PageCount <= 500).LongCount();
+    }
+
 }

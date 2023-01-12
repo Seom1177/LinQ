@@ -31,7 +31,13 @@
 //ImprimirValores(queries.TercerYCuartoLibroMayor400Pag());
 
 // Tres primeros libros filtrados con select
-ImprimirValores(queries.TresPrimerosLibrosDeLaColleccion());
+//ImprimirValores(queries.TresPrimerosLibrosDeLaColleccion());
+
+// Count cantidad de libros
+//Console.WriteLine($"Cantidad de libros entre 200 y 500: {queries.CantidadDeLibrosEntre200y500()}");
+
+// LongCount cantidad de libros
+Console.WriteLine($"Cantidad de libros entre 200 y 500: {queries.CantidadDeLibrosEntre200y500Long()}");
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){
     Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");
