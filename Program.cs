@@ -56,16 +56,29 @@
 // Sum suma paginas entre 0 a 500 por libro
 // Console.WriteLine($"Suma total de paginas {queries.SumaDeTodasLasPag200a500()}");
 
-// Libros publicados despues del 2015
+// Aggregate Libros publicados despues del 2015
 // Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concat());
 
-// El promedio de caracteres de los titulos de los libros
-Console.WriteLine($"Promedio char titulos libros {queries.PromedioCaracteresTitulo()}");
+// Average El promedio de caracteres de los titulos de los libros
+// Console.WriteLine($"Promedio char titulos libros {queries.PromedioCaracteresTitulo()}");
+
+// GroupBy Llibros agrupados por año despues del 2000
+ImprimirGrupo(queries.LibrosDespuesDel2000AgrupadosPorAgno());
+
 
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){
     Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");
     foreach(var item in listadeLibros){
         Console.WriteLine("{0, -60} {1, 15} {2, 17}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
+    }
+}
+void ImprimirGrupo (IEnumerable<IGrouping<int, Book>> listadeLibros){
+    foreach(var grupo in listadeLibros){
+        Console.WriteLine($"Grupo: {grupo.Key}");
+        Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+        foreach(var item in grupo){
+            Console.WriteLine("{0, -60} {1, 15} {2, 17}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
+        }
     }
 }
