@@ -37,7 +37,21 @@
 //Console.WriteLine($"Cantidad de libros entre 200 y 500: {queries.CantidadDeLibrosEntre200y500()}");
 
 // LongCount cantidad de libros
-Console.WriteLine($"Cantidad de libros entre 200 y 500: {queries.CantidadDeLibrosEntre200y500Long()}");
+//Console.WriteLine($"Cantidad de libros entre 200 y 500: {queries.CantidadDeLibrosEntre200y500Long()}");
+
+// Min Fecha menor de publicacion
+//Console.WriteLine($"Fecha menor de publicacion: {queries.FechaDePublicacionMenor()}");
+
+//  Max NUmero de paginas maximo
+//Console.WriteLine($"El mayor numero de paginas en la collecion: {queries.NumeroDePagMayor()}");
+
+// MinBy libro con el menor numero de paginas
+//var libroMenorPag = queries.LibroMenorNumPag();
+//Console.WriteLine($"{libroMenorPag!.Title} - {libroMenorPag.PageCount}");
+
+// MaxBy libro con la fecha publicacion mas reciente
+var libroMaxFecha = queries.LibroFechaPublicacionReciente();
+Console.WriteLine($"{libroMaxFecha!.Title} - {libroMaxFecha.PublishedDate.ToShortDateString()}");
 
 void ImprimirValores (IEnumerable<Book> listadeLibros){
     Console.WriteLine("{0, -60} {1, 15} {2, 17}\n", "Titulo", "N. Paginas", "Fecha publicacion");
