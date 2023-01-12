@@ -112,4 +112,7 @@ public class LinqQueries{
             .Where(p=> p.PublishedDate.Year > 2000)
             .GroupBy(p=> p.PublishedDate.Year);
     }
+    public ILookup<char, Book> DiccionarioDeLibrosPorLetra(){
+        return librosCollection.ToLookup(p=> p.Title[0], p=> p);
+    }
 }
